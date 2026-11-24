@@ -1,0 +1,106 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+a {
+    list-style: none;
+    color: initial;
+}
+section .intro {
+    display: flex;
+    flex-direction: column;
+}
+.intro .text {
+    flex-wrap: wrap;
+    width: 70%;
+}
+.intro h1 {
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.intro p:first-child {
+    color: var(--secondaryColor);
+    font-weight: 500;
+    font-size: 15px;
+    font-family: monospace;
+    padding-bottom: 20px;
+}
+.intro p.desc {
+    color: var(--grayerColor);
+    font-family: monospace;
+    font-size: 15px;
+}
+.botoes {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.botoes button, .botoes a {
+    padding: 1.5%;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 20px;
+    border-radius: 15px;
+    background: none;
+    color: white;
+    border: 1px solid var(--secondaryColor);
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+.botoes button:hover, .botoes a:hover {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-color: var(--tertiaryColor);
+}
+.fotoPerfil {
+    background-color: white;
+    overflow: hidden;
+    width: 20%;
+    height: 35%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 30px 5px black;
+    transition: all ease-in-out 0.5s;
+    transform-style: preserve-3d;
+}
+.fotoPerfil:hover {
+    transform: rotatey(180deg);
+    background-color: var(--secondaryColor);
+}
+.fotoPerfil:hover img{
+    opacity: 0;
+}
+.fotoPerfil:hover::after {
+    transform: rotateY(180deg);
+    content: "Prates.dev";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, white 57%, var(--primaryColor) 57%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+figure img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    scale: 0.8;
+    position: relative;
+    top: -30%;
+    transition: all ease-in-out 0.4s;
+}

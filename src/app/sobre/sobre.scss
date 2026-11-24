@@ -1,0 +1,114 @@
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 80vh;
+}
+section .text-sobre {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text-sobre h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-sobre p {
+    color: var(--secondaryColor);
+    font-weight: 500;
+    font-size: 15px;
+    font-family: monospace;
+    padding-bottom: 20px;
+}
+.text-sobre ul li {
+    color: var(--grayerColor);
+    font-family: monospace;
+    font-size: 15px;
+    padding: 20px 0;
+    border-bottom: 1px #2dd4be6b solid;
+}
+.perfil {
+    background-color: #162535;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #0F1720;
+    padding: 20px;
+    position: sticky;
+    top: 60px;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: visible;
+}
+.perfil h5 {
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--secondaryColor);
+}
+
+.perfil ul {
+    margin-top: 10%;
+    margin-left: -5%;
+
+}
+.perfil ul li {
+    color: var(--grayerColor);
+    font-family: monospace;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+// animacao do contorno do perfil
+.orbita {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.orbita-path,
+.orbita-light {
+    fill: none;
+    stroke-width: 1;
+}
+
+.orbita-path {
+    stroke: rgba(0, 0, 0, 0.0);
+}
+
+.orbita-light {
+    stroke: var(--tertiaryColor);
+    stroke-linecap: round;
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    filter: drop-shadow(0 0 4px var(--tertiaryColor))
+            drop-shadow(0 0 8px var(--tertiaryColor));
+
+    animation: orbita 5s linear infinite;
+}
+
+@keyframes orbita {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    45% {
+        stroke-dashoffset: 0;
+    }
+
+    55% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -1000;
+    }
+}

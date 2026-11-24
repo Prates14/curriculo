@@ -1,0 +1,233 @@
+
+<section>
+
+    <div class="intro-proj">
+        <p>04 • Experiência</p>
+        <h2>Histórico Profissional</h2>
+    </div>
+
+    <div class="historic-container">
+
+        <div class="timeline">
+
+            <!-- EXPERIÊNCIA 01 -->
+            <article class="timeline-item">
+
+                <div class="timeline-date">
+                    04/2026 — Atual
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+
+                    <button
+                        class="timeline-toggle"
+                        type="button"
+                        [attr.aria-expanded]="experienciaAberta === 0"
+                        (click)="toggleExperiencia(0)">
+
+                        <div class="cargo-info">
+
+                            <span class="cargo-atual">ATUAL</span>
+
+                            <h3>Analista CDPM JR1</h3>
+
+                            <span class="empresa">
+                                Offerwise do Brasil Serviços de Pesquisa LTDA – Belo Horizonte, Minas Gerais
+                            </span>
+
+                        </div>
+
+                        <span class="toggle-icon">
+                            {{ experienciaAberta === 0 ? '−' : '+' }}
+                        </span>
+
+                    </button>
+
+                        <div class="timeline-details open" [class.open]="experienciaAberta === 0">
+
+                            <div class="details-content">
+
+                                <p>Coleta, Análise, interpretação de dados sobre consumidores, concorrentes, tendências e o ambiente competitivo para auxílio de empresas em tomada de decisões estratégicas nas áreas diversas.</p>
+
+                                <div class="skills">
+                                    <span>Gestão de projetos</span>
+                                    <span>Pesquisa de mercado</span>
+                                    <span>Controle de processos</span>
+                                    <span>Comunicação</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIÊNCIA 02 -->
+            <article class="timeline-item">
+
+                <div class="timeline-date">
+                    07/2024 — 04/2026
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+
+                    <button
+                        class="timeline-toggle"
+                        type="button"
+                        [attr.aria-expanded]="experienciaAberta === 1"
+                        (click)="toggleExperiencia(1)">
+
+                        <div class="cargo-info">
+
+                            <h3>Programador JR1</h3>
+
+                            <span class="empresa">
+                                Offerwise do Brasil Serviços de Pesquisa LTDA – Belo Horizonte, Minas Gerais
+                            </span>
+
+                        </div>
+
+                        <span class="toggle-icon">
+                            {{ experienciaAberta === 1 ? '−' : '+' }}
+                        </span>
+
+                    </button>
+
+                        <div class="timeline-details open" [class.open]="experienciaAberta === 1">
+
+                            <div class="details-content">
+
+                                <p>Análise e programação de questionários diversos sob a utilização de ferramentas de criação 'survey'.</p>
+
+                                <div class="skills">
+                                    <span>Programação</span>
+                                    <span>Análise de pesquisa</span>
+                                    <span>UI/UX</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIÊNCIA 03 -->
+            <article class="timeline-item">
+
+                <div class="timeline-date">
+                    06/2022 – 10/2022
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+
+                    <button
+                        class="timeline-toggle"
+                        type="button"
+                        [attr.aria-expanded]="experienciaAberta === 2"
+                        (click)="toggleExperiencia(2)">
+
+                        <div class="cargo-info">
+
+                            <h3>Técnico de Planejamento de Produção</h3>
+
+                            <span class="empresa">
+                                Sartori Serviços LTDA – João Monlevade, Minas Gerais
+                            </span>
+
+                        </div>
+
+                        <span class="toggle-icon">
+                            {{ experienciaAberta === 2 ? '−' : '+' }}
+                        </span>
+
+                    </button>
+
+                        <div class="timeline-details open" [class.open]="experienciaAberta === 2">
+
+                            <div class="details-content">
+
+                                <p>Planejamento no desenvolvimento das operações, controle da produção e resoluções de problemas, prestando um serviço de atendimento ao cliente de ponta.</p>
+
+                                <div class="skills">
+                                    <span>Administração</span>
+                                    <span>Planejamento</span>
+                                    <span>Excel/Project</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </article>
+
+            <!-- EXPERIÊNCIA 04 -->
+            <article class="timeline-item">
+
+                <div class="timeline-date">
+                    12/2020 – 06/2022
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+
+                    <button
+                        class="timeline-toggle"
+                        type="button"
+                        [attr.aria-expanded]="experienciaAberta === 3"
+                        (click)="toggleExperiencia(3)">
+
+                        <div class="cargo-info">
+
+                            <h3>Assistente de Planejamento de Produção</h3>
+
+                            <span class="empresa">
+                                Sartori Serviços LTDA – João Monlevade, Minas Gerais
+                            </span>
+
+                        </div>
+
+                        <span class="toggle-icon">
+                            {{ experienciaAberta === 3 ? '−' : '+' }}
+                        </span>
+
+                    </button>
+
+                        <div class="timeline-details open" [class.open]="experienciaAberta === 3">
+
+                            <div class="details-content">
+
+                                <p>Auxílio ao planejamento no desenvolvimento das operações e resoluções de problemas, prestando um serviço de atendimento ao cliente de ponta.</p>
+
+                                <div class="skills">
+                                    <span>Administração</span>
+                                    <span>Planejamento</span>
+                                    <span>Excel</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </article>
+        </div>
+
+    </div>
+
+</section>

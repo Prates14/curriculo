@@ -1,0 +1,270 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 150vh;
+}
+section .intro-proj {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.intro-proj h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.intro-proj p {
+    color: var(--secondaryColor);
+    font-weight: 500;
+    font-size: 15px;
+    font-family: monospace;
+    padding-bottom: 20px;
+}
+
+// historico
+
+/* HISTÓRICO */
+
+.historic-container {
+    width: 100%;
+    max-width: 950px;
+    margin-top: 30px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* LINHA DA TIMELINE */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 15px;
+    bottom: 15px;
+    width: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        var(--primaryColor),
+        var(--secondaryColor),
+        transparent
+    );
+
+    opacity: .6;
+}
+
+/* ITEM */
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 97px 48px 1fr;
+    align-items: start;
+    position: relative;
+}
+
+/* DATA */
+
+.timeline-date {
+    padding-top: 28px;
+    text-align: right;
+    font-size: 12px;
+    color: var(--secondaryColor);
+    white-space: nowrap;
+}
+
+/* MARCADOR */
+
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    margin: 31px auto 0;
+
+    border-radius: 50%;
+    border: 2px solid var(--secondaryColor);
+    background: var(--primaryColor);
+
+    position: relative;
+    z-index: 2;
+
+    transition: .8s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background: var(--primaryColor);
+    box-shadow: 0 0 15px var(--primaryColor);
+}
+
+/* CARD */
+
+.timeline-card {
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    background: rgba(255,255,255,.07);
+
+    transition: .8s ease;
+}
+
+.timeline-card:hover {
+    border-color: var(--secondaryColor);
+}
+
+/* BOTÃO DO CARGO */
+
+.timeline-toggle {
+    width: 100%;
+    padding: 22px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    border: none;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    gap: 15px;
+}
+
+.cargo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cargo-info h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.empresa {
+    color: var(--grayerColor);
+    font-size: 13px;
+}
+
+.cargo-atual {
+    color: var(--secondaryColor);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* ÍCONE */
+
+.toggle-icon {
+    font-size: 25px;
+    color: white;
+    transition: transform .5s ease;
+}
+
+.timeline-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* DETALHES */
+
+.timeline-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+
+    grid-template-rows: 
+        1s ease,
+        opacity 1s ease;
+}
+
+.timeline-details[hidden] {
+    display: none;
+}
+
+.timeline-details.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.details-content {
+    overflow: hidden;
+    min-height: 0;
+    padding: 0 25px;
+    transition: padding 1s ease;
+}
+
+.timeline-details.open .details-content {
+    padding-bottom: 25px;
+}
+
+.details-content p {
+    color: var(--grayerColor);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* COMPETÊNCIAS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills span {
+    font-size: 11px;
+    padding: 7px 12px;
+    border-radius: 5px;
+
+    border: 1px solid rgba(255,255,255,.2);
+    color: var(--secondaryColor);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 12px 1fr;
+        gap: 18px;
+    }
+
+    .timeline-date {
+        grid-column: 2;
+        text-align: left;
+        padding: 0 0 10px;
+    }
+
+    .timeline-marker {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        margin: 3px 0 0;
+    }
+
+    .timeline-card {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .timeline-toggle {
+        padding: 18px;
+    }
+
+    .cargo-info h3 {
+        font-size: 16px;
+    }
+
+    .details-content {
+        padding: 0 18px;
+    }
+}
