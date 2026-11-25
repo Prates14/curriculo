@@ -5,17 +5,20 @@ section {
     align-items: center;
     height: 100vh;
 }
+
 section .intro-hab {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .intro-hab h2 {
     font-size: 40px;
     padding-bottom: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .intro-hab p {
     color: var(--secondaryColor);
     font-weight: 500;
@@ -23,25 +26,30 @@ section .intro-hab {
     font-family: monospace;
     padding-bottom: 20px;
 }
+
 .grade-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .grade-container .content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 .grade-container .content .info-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .info-text p {
     font-size: 12px;
 }
+
 .grade-container .content .level {
     background-color: var(--primaryColor);
     width: 100%;
@@ -49,9 +57,31 @@ section .intro-hab {
     border-radius: 5px;
     box-shadow: 0 0 7px 0px white;
 }
+
 .grade-container .content .level span {
     background-color: var(--secondaryColor);
     display: flex;
     height: 5px;
     border-radius: 5px;
+}
+
+//responsividade
+@media (max-width: 1200px) {
+    section {
+        height: 80vh;
+    }
+
+    .intro-hab p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        height: 120vh;
+    }
+
+    .grade-container {
+        grid-template-columns: auto;
+    }
 }

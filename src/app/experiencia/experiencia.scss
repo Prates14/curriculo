@@ -5,17 +5,20 @@ section {
     align-items: flex-start;
     height: 150vh;
 }
+
 section .intro-proj {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .intro-proj h2 {
     font-size: 40px;
     padding-bottom: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .intro-proj p {
     color: var(--secondaryColor);
     font-weight: 500;
@@ -51,12 +54,10 @@ section .intro-proj {
     bottom: 15px;
     width: 2px;
 
-    background: linear-gradient(
-        to bottom,
-        var(--primaryColor),
-        var(--secondaryColor),
-        transparent
-    );
+    background: linear-gradient(to bottom,
+            var(--primaryColor),
+            var(--secondaryColor),
+            transparent);
 
     opacity: .6;
 }
@@ -105,9 +106,9 @@ section .intro-proj {
 /* CARD */
 
 .timeline-card {
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .1);
     border-radius: 10px;
-    background: rgba(255,255,255,.07);
+    background: rgba(255, 255, 255, .07);
 
     transition: .8s ease;
 }
@@ -177,7 +178,7 @@ section .intro-proj {
     grid-template-rows: 0fr;
     opacity: 0;
 
-    grid-template-rows: 
+    grid-template-rows:
         1s ease,
         opacity 1s ease;
 }
@@ -222,13 +223,26 @@ section .intro-proj {
     padding: 7px 12px;
     border-radius: 5px;
 
-    border: 1px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255, 255, 255, .2);
     color: var(--secondaryColor);
 }
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+    section {
+        height: 100vh;
+    }
+
+    .intro-proj p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        height: 170vh;
+    }
 
     .timeline::before {
         left: 5px;

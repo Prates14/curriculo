@@ -5,28 +5,35 @@ section {
     align-items: flex-start;
     height: 80vh;
 }
+
 footer {
     margin-bottom: 50px;
 }
-section .intro-proj, footer .contato {
+
+section .intro-proj,
+footer .contato {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .contato h2 {
     font-size: 40px;
     text-align: center;
     padding-bottom: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.intro-proj p, .contato p {
+
+.intro-proj p,
+.contato p {
     color: var(--secondaryColor);
     font-weight: 500;
     font-size: 15px;
     font-family: monospace;
     padding-bottom: 20px;
 }
+
 ul {
     list-style: none;
     display: flex;
@@ -35,6 +42,7 @@ ul {
     align-items: center;
     gap: 10px;
 }
+
 ul li {
     font-size: 12px;
     color: var(--secondaryColor);
@@ -44,9 +52,11 @@ ul li {
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 ul li span {
     font-weight: 100;
 }
+
 .redes {
     display: flex;
     justify-content: center;
@@ -59,9 +69,36 @@ ul li span {
     padding: 10px;
     border: 1px solid var(--tertiaryColor);
 }
+
 .redes div {
     text-align: center;
 }
+
 .redes img {
     width: 50px;
+}
+
+//responsividade
+@media (max-width: 1200px) {
+    section {
+        height: auto;
+        margin-bottom: 100px;
+    }
+    .intro-proj p,
+    .contato p {
+        font-size: 20px;
+    }
+    ul li {
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        height: auto;
+        margin-bottom: 100px;
+    }
 }
